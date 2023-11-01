@@ -7,6 +7,8 @@ import CategoryCard from '../components/category-card'
 import ItemCard from '../components/item-card'
 import BlogPostCard from '../components/blog-post-card'
 import './home.css'
+import { Link as ScrollLink } from 'react-scroll';
+
 
 const Home = (props) => {
   return (
@@ -32,15 +34,76 @@ const Home = (props) => {
             </div>
             <div className="home-middle">
               <div className="home-left">
-                <span className="navbar-link">SHOP</span>
-                <span className="navbar-link">LOOKBOOK</span>
-                <span className="navbar-link">SPECIAL</span>
+              <ScrollLink
+                  to="shop"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={300}
+                  className="navbar-link"
+                >
+                  SHOP
+                </ScrollLink>
+
+                
+                <ScrollLink
+                  to="lookbook"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={300}
+                  className="navbar-link"
+                >
+                  LOOKBOOK
+                </ScrollLink>
+
+
+                <ScrollLink
+                  to="special"
+                  spy={true}
+                  smooth={true}
+                  offset={-30}
+                  duration={300}
+                  className="navbar-link"
+                >
+                  SPECIAL
+                </ScrollLink>
+
               </div>
               <span className="navbar-logo-title">MOBILLIO</span>
               <div className="home-right">
-                <span className="navbar-link">ABOUT</span>
-                <span className="navbar-link">BLOG</span>
-                <span className="navbar-link">CONTACT</span>
+              <ScrollLink
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={300}
+                  className="navbar-link"
+                >
+                  ABOUT
+                </ScrollLink>
+
+                <ScrollLink
+                  to="blog"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={300}
+                  className="navbar-link"
+                >
+                  BLOG
+                </ScrollLink>
+
+                <ScrollLink
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={300}
+                  className="navbar-link"
+                >
+                  CONTACT
+                </ScrollLink>
               </div>
             </div>
             <div className="home-icons">
@@ -137,7 +200,7 @@ const Home = (props) => {
           </div>
         </div>
         <div className="section-container column">
-          <div className="max-width-container">
+          <div className="max-width-container" id="shop">
             <SectionHeading
               heading="SHOP BY CATEGORIES"
               subtitle="Start shopping based on the categories you are interested in"
@@ -176,7 +239,7 @@ const Home = (props) => {
               </span>
             </div>
           </div>
-          <div className="home-container06 max-width-container">
+          <div className="home-container06 max-width-container" id="about">
             <div className="home-container07">
               <span className="home-text23">
                 <span>
@@ -211,7 +274,7 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div className="section-container">
+        <div className="section-container" id="special">
           <div className="max-width-container">
             <SectionHeading></SectionHeading>
             <div className="home-gallery">
@@ -263,7 +326,7 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div className="home-full-width-banner section-container">
+        <div className="home-full-width-banner section-container" id="lookbook">
           <div className="home-left4">
             <div className="home-content">
               <span className="home-text29">LOOKBOOKS</span>
@@ -281,7 +344,7 @@ const Home = (props) => {
             className="home-image6"
           />
         </div>
-        <div className="section-container">
+        <div className="section-container" id="blog">
           <div className="max-width-container">
             <SectionHeading
               heading="Our blog"
@@ -310,7 +373,7 @@ const Home = (props) => {
       <div className="home-footer">
         <div className="max-width-container">
           <footer className="home-footer1">
-            <div className="home-container09">
+            <div className="home-container09" id="contact">
               <h3 className="home-text32 Heading-3">MOBILLIO</h3>
               <span className="home-text33">
                 <span>4517 Washington Ave. Manchester, Kentucky 39495,</span>
